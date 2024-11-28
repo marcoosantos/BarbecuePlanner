@@ -164,12 +164,12 @@
     <ImageView
         android:id="@+id/bbq_logo"
         android:layout_width="wrap_content"
-        android:layout_height="450dp"
+        android:layout_height="380dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_calculate"
-        app:srcCompat="@drawable/bbqplanner_logo"
+        app:srcCompat="@drawable/bbq_logo"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="718dp" />
 
