@@ -32,13 +32,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tie_numAdults"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_layout"
-            android:hint="Number of adults:"
-            android:textSize="20sp" />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_man_icon"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/man_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_numAdults"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_layout"
+                android:hint="Number of adults:"
+                android:inputType="number"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_man_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -53,13 +74,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_numAdults">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tie_numKids"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_layout"
-            android:hint="Number of kids:"
-            android:textSize="20sp" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_kid_icon"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/kid_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_numKids"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_layout"
+                android:hint="Number of kids:"
+                android:inputType="number"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_kid_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -74,13 +116,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_numKids">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tie_bbqduration"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_layout"
-            android:hint="Barbecue duration (in hours):"
-            android:textSize="20sp" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_clock_icon"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/clock_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_bbqduration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_layout"
+                android:hint="Barbecue duration (in hours):"
+                android:inputType="numberDecimal"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_clock_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -109,5 +172,5 @@
         app:srcCompat="@drawable/bbqplanner_logo"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="718dp" />
-    
+
 </androidx.constraintlayout.widget.ConstraintLayout>

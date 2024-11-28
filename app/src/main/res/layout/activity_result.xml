@@ -8,7 +8,7 @@
     tools:context=".ResultActivity">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
@@ -19,62 +19,109 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/meat_result"
+    <LinearLayout
+        android:id="@+id/layout_meat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:gravity="center"
-        android:textSize="32sp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        tools:text="Total of Meat: 2.5" />
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
 
-    <TextView
-        android:id="@+id/beer_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="center"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/meat_result"
-        tools:text="Total of beer: 35" />
+        <ImageView
+            android:id="@+id/iv_meat_icon"
+            android:layout_width="42dp"
+            android:layout_marginStart="24dp"
+            android:layout_height="42dp"
+            android:src="@drawable/meat_icon" />
 
-    <TextView
-        android:id="@+id/soda_result"
+        <TextView
+            android:id="@+id/meat_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:textSize="24sp"
+            tools:text="Total of Meat (kg): 2.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_beer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:gravity="center"
-        android:textSize="32sp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/beer_result"
-        tools:text="Total of soda: 6" />
+        app:layout_constraintTop_toBottomOf="@id/layout_meat">
+
+        <ImageView
+            android:id="@+id/iv_beer_icon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/beer_icon"/>
+
+        <TextView
+            android:id="@+id/beer_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:textSize="24sp"
+            tools:text="Total of beer (cans): 12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_soda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_beer">
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/soda_icon"/>
+
+        <TextView
+            android:id="@+id/soda_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:textSize="24sp"
+            tools:text="Total of soda (bottles): 8"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_refresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_soda"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/orange"
         android:text="Refresh"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/soda_result" />
+        android:backgroundTint="@color/orange"/>
 
     <ImageView
         android:id="@+id/bbq_logo"
